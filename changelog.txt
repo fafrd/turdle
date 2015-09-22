@@ -1,0 +1,5 @@
+--Changelog--
+report any bugs to kbradley@ucmerced.edu
+
+12-21-14
+hashed passwords! passwords are now encrypted
