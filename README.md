@@ -6,9 +6,14 @@ Turdle is a fun little webapp I made with Shon Shabari (sshabari@ucmerced.edu) a
 
 Making a simple webapp like this is really easy. I set up an Ubuntu server and installed and configured nginx, mysql, php5-fpm, and phpmyadmin. I logged into phpmyadmin and created the database with the tables, and set my password to reflect the one contained in my php files.
 
-In the php files, connecting to the database 'turdle' as user 'root' with password 'password' is a simple `$link = mysqli_connect('localhost', 'root', 'password', 'turdle');`
-Performing a query is done as `$result = mysqli_fetch_array(mysqli_query($link, "SELECT MAX(d_dumpid) FROM dump WHERE d_userid='$userid'"));`
+In the php files, connecting to the database 'turdle' as user 'root' with password 'password' is a simple
+
+`$link = mysqli_connect('localhost', 'root', 'password', 'turdle');`
+
+Performing a query is done as 
+
+`$result = mysqli_fetch_array(mysqli_query($link, "SELECT MAX(d_dumpid) FROM dump WHERE d_userid='$userid'"));`
 
 ##bugs##
 - Persistent login does not work. didn't get around to using cookies
-- Exploitable because new dump insertion checks if $_SESSION['userid'] is set, but does not used $_SESSION['hashedpassword'] to verify user
+- Exploitable because new dump insertion checks if `$_SESSION['userid']` is set, but does not use `$_SESSION['hashedpassword']` to verify user
