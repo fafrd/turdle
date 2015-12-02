@@ -8,7 +8,7 @@ error_reporting(-1);
 session_start();
 
 // Connect to database
-$link = mysqli_connect('localhost', 'root', 'password', 'turdle');
+$link = mysqli_connect($_ENV['db_host'], $_ENV['db_user'], $_ENV['db_password'], $_ENV['db_name']);
 
 // Taking form info and placing into variables
 $email = (isset($_POST['email']) ? $_POST['email'] : null);

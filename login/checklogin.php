@@ -6,7 +6,7 @@ ini_set('display_errors',1);
 error_reporting(-1);
 
 // Connect to database
-$link = mysqli_connect('localhost', 'root', 'password', 'turdle');
+$link = mysqli_connect($_ENV['db_host'], $_ENV['db_user'], $_ENV['db_password'], $_ENV['db_name']);
 
 session_start();
 

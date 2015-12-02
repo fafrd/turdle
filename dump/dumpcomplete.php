@@ -8,7 +8,8 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<link href="/ratchet/css/ratchet.css" rel="stylesheet">
 		<link href="/theme/theme.css" rel="stylesheet">
-		<?php $link = mysqli_connect('localhost', 'root', 'password', 'turdle');
+		<?php
+                $link = mysqli_connect($_ENV['db_host'], $_ENV['db_user'], $_ENV['db_password'], $_ENV['db_name']);
  				session_start();
  				$name = isset($_SESSION['name']) ? $_SESSION['name'] : null;
 				$userid = (isset($_SESSION['userid']) ? $_SESSION['userid'] : null);

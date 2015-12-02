@@ -10,6 +10,10 @@ In the php files, connecting to the database 'turdle' as user 'root' with passwo
 
 `$link = mysqli_connect('localhost', 'root', 'password', 'turdle');`
 
+(alternatively, you can pass these arguments as environment variables:)
+
+`$link = mysqli_connect($_ENV['db_host'], $_ENV['db_user'], $_ENV['db_password'], $_ENV['db_name']);`
+
 Performing a query is done as 
 
 `$result = mysqli_fetch_array(mysqli_query($link, "SELECT MAX(d_dumpid) FROM dump WHERE d_userid='$userid'"));`
