@@ -54,7 +54,7 @@ if($insert_success && $user_exists_count == 0)
 	// Register email, password and redirect to accountcreated.php
 	$_SESSION['email'] = $email;
 	$_SESSION['name'] = $name;
-	$sql = "SELECT u_userid FROM user WHERE u_username='$email' and u_password='$hased_password'";
+	$sql = "SELECT u_userid FROM user WHERE u_username='$email' and u_password='$hashed_password'";
 	$result = mysqli_fetch_array(mysqli_query($link, $sql));
 	$_SESSION['userid'] = $result[0];
 	$_SESSION['password'] = $hashed_password;
