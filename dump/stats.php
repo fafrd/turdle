@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php
 session_start();
 
@@ -8,6 +7,7 @@ if ($_SESSION['userid'] == 0)
 	header("location:/login/");
 }
 ?>
+<!DOCTYPE html>
 
 <html>
 	<head>
